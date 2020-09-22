@@ -63,6 +63,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       node.vm.network :private_network, ip: vms[name][:ip]
 
       node.vm.provider :virtualbox do |vb|
+        vb.name = name
         vb.gui = false
         vb.memory = vms[name][:memory]
       end
@@ -72,7 +73,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       end
 
       if vms[name][:synced_folders]
-        node.vm.synced_folder ".", "/vagrant", type: "virtualbox"
+        node.vm.synced_folder ".", "/vagrant", type: "virtualbox", nfs: true
       end
     end
   end
