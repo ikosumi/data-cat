@@ -45,7 +45,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           :ip => '10.0.11.15',
           :memory => 512,
           :ports => [],
-          :bootstrap => false,
+          :bootstrap => true,
           :synced_folders => true
       }
   }
@@ -53,7 +53,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   vms.each_key do |name|
     config.vm.define name, :autostart => true do |node|
 
-      node.vm.box = 'centos/8'
+      node.vm.box = 'centos/7'
+      node.vm.box_version = "2004.01"
       node.vm.hostname = name
 
       vms[name][:ports].each do |port_mapping|
@@ -70,6 +71,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
       if vms[name][:bootstrap]
         # Enable provisioning with a shell script.
+        node.vm.provision :shell, path: "vagrant-scripts/bootstrap-#{name}.sh"
       end
 
       if vms[name][:synced_folders]
