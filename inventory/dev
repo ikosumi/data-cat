@@ -1,0 +1,17 @@
+[master]
+master1 ansible_host=master ip_address=10.0.11.11
+
+[data]
+data1 ansible_host=data ip_address=10.0.11.12
+
+[shipper]
+shipper1 ansible_host=shipper ip_address=10.0.11.13
+
+[kibana]
+kibana1 ansible_host=kibana ip_address=10.0.11.14
+
+[dev:children]
+master
+data
+shipper
+kibana

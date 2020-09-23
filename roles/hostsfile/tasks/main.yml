@@ -1,0 +1,8 @@
+---
+
+- name: Create hosts file
+  template:
+    src: hosts.j2
+    dest: "{{ hosts_file }}"
+    mode: 0644
+  become: yes

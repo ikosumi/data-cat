@@ -1,0 +1,11 @@
+# Warning!! This an auto-generated file.
+# Any manual change will be overwritten by ansible.
+
+# The following lines are desirable for IPv4 capable hosts
+127.0.0.1 localhost.localdomain localhost
+
+::1 localhost.localdomain localhost
+
+{% for host in groups['all'] %}
+{{ hostvars[host].ip_address}} {{ hostvars[host].ansible_host }}
+{% endfor %}
