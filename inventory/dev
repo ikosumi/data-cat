@@ -15,3 +15,7 @@ master
 data
 shipper
 kibana
+
+[dev:vars]
+ansible_user=vagrant
+ansible_ssh_private_key_file=.vagrant/machines/provisioner/virtualbox/private_key

@@ -1,0 +1,14 @@
+# Warning!! This an auto-generated file.
+# Any manual change will be overwritten by ansible.
+
+Host *
+    GSSAPIAuthentication no
+    ServerAliveInterval 40
+    ServerAliveCountMax 100
+
+{% for host in groups['all'] %}
+Host {{ hostvars[host].ansible_host }}
+  HostName {{ hostvars[host].ip_address }}
+  User {{ hostvars[host].ansible_user }}
+
+{% endfor %}

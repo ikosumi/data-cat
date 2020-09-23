@@ -1,0 +1,4 @@
+---
+
+ssh_directory: "~/.ssh"
+ssh_config_file: "{{ ssh_directory }}/config"

@@ -1,0 +1,7 @@
+---
+
+- name: Generate ssh config file
+  template:
+    src: config.j2
+    dest: "{{ ssh_config_file }}"
+    mode: 0600
