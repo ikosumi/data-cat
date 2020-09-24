@@ -27,6 +27,9 @@ export EDITOR=VIM
 if [ "$(hostname)" = "provisioner" ]; then
   sudo yum install epel-release -y
   sudo yum install ansible -y
+  # to ssh from provisioner to any other nodes, add it's private key to ssh-agent
+  eval "$(ssh-agent -s)"
+  ssh-add /vagrant/.vagrant/machines/provisioner/virtualbox/private_key
 else
   cat /vagrant/roles/ssh_config/files/id_rsa.pub >> ~/.ssh/authorized_keys # provisioners public key is needed on all other nodes
 fi
