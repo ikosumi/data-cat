@@ -1,0 +1,6 @@
+---
+
+ansible_user: "vagrant"
+ansible_ssh_private_key_file: ".vagrant/machines/provisioner/virtualbox/private_key"
+elasticserach_version: "7.9.2"
+elasticsearch_download_link: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-{{ elasticserach_version }}-x86_64.rpm"

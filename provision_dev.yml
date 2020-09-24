@@ -4,3 +4,4 @@
   roles:
     - role: hostsfile
     - role: ssh_config
+    - role: elasticsearch

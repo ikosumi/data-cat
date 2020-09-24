@@ -1,0 +1,11 @@
+---
+
+- name: Download Elasticsearch v{{ elasticserach_version }}
+  run_once: true
+  delegate_to: localhost
+  get_url:
+    url: "{{ elasticsearch_download_link }}"
+    dest: "roles/elasticsearch/files"
+    mode: 0700
+    checksum: "sha512:{{ elasticsearch_download_link }}.sha512"
+  tags: ['downloads']
