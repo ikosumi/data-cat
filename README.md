@@ -36,4 +36,5 @@ At this point, you can go grab a ☕️ and come back later.
 - [Ruby IntelliJ plugin](https://www.jetbrains.com/help/idea/ruby-plugin.html#further-steps)
 - [Vagrant IntelliJ plugin](https://plugins.jetbrains.com/plugin/7379-vagrant)
 - [YAML/Ansible support for IntelliJ](https://plugins.jetbrains.com/plugin/7792-yaml-ansible-support)
+- [.ini file support](https://plugins.jetbrains.com/plugin/6981-ini)
 - [OrchidE](https://www.orchide.dev/) lang. support for ansible for IntelliJ (commercial, 30 day trial)
