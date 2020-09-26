@@ -1,0 +1,6 @@
+---
+
+home_dir: "/home/{{ ansible_user }}"
+install_dir: "{{ home_dir }}/datacat"
+apps_dir: "{{ install_dir }}/apps"
+

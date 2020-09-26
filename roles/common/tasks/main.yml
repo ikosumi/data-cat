@@ -1,0 +1,11 @@
+---
+
+- name: Create directories
+  file:
+    state: directory
+    mode: "0744"
+    path: "{{ item }}"
+  with_items:
+    - "{{ install_dir }}"
+    - "{{ apps_dir }}"
+  tags: ["dirs"]

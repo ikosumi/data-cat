@@ -3,5 +3,6 @@
 - hosts: dev
   roles:
     - role: hostsfile
+    - role: common
     - role: ssh_config
     - role: elasticsearch
