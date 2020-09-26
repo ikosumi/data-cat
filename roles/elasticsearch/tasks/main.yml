@@ -4,8 +4,16 @@
   run_once: true
   delegate_to: localhost
   get_url:
-    url: "{{ elasticsearch_download_link }}"
+    url: "{{ elasticserh_download_link_linux }}"
     dest: "roles/elasticsearch/files"
     mode: 0700
-    checksum: "sha512:{{ elasticsearch_download_link }}.sha512"
+    checksum: "sha512:{{ elasticserh_download_link_linux }}.sha512"
   tags: ['downloads']
+
+- name: "Install Elasticsearch"
+  unarchive:
+    dest: "{{ apps_dir }}"
+    src: "elasticsearch-{{ elasticserach_version }}-linux-x86_64.tar.gz"
+    owner: "{{ ansible_user }}"
+    mode: 0700
+  tags: ['install_es']
