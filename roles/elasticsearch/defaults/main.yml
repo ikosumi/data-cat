@@ -1,0 +1,5 @@
+---
+
+elasticsearch_conf_dir: '{{ config_dir }}/elasticsearch'
+elasticsearch_logs_dir: '{{ logs_dir }}/elasticsearch'
+elasticsearch_run_dir: '{{ run_dir }}/elasticsearch'

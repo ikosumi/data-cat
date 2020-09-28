@@ -17,3 +17,12 @@
     owner: "{{ ansible_user }}"
     mode: 0700
   tags: ['install_es']
+
+- name: "Create elasticsearch directories"
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "{{ elasticsearch_conf_dir }}"
+    - "{{ elasticsearch_logs_dir }}"
+    - "{{ elasticsearch_run_dir }}"

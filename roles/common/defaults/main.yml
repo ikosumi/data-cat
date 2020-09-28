@@ -3,4 +3,7 @@
 home_dir: "/home/{{ ansible_user }}"
 install_dir: "{{ home_dir }}/datacat"
 apps_dir: "{{ install_dir }}/apps"
+config_dir: "{{ install_dir }}/config"
+logs_dir: "{{ install_dir }}/logs"
+run_dir: "{{ install_dir }}/run"
 

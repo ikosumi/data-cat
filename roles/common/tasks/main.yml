@@ -8,4 +8,7 @@
   with_items:
     - "{{ install_dir }}"
     - "{{ apps_dir }}"
+    - "{{ config_dir }}"
+    - "{{ logs_dir }}"
+    - "{{ run_dir }}"
   tags: ["dirs"]
